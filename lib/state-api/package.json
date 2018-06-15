@@ -1,0 +1,9 @@
+{
+  "name": "state-api",
+  "version": "1.0.0",
+  "description": "State API",
+  "main": "lib/index.js",
+  "repository": "https://github.com/advanced-react/state-api",
+  "author": "Jose Alanya",
+  "license": "MIT"
+}

@@ -29,14 +29,14 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Article
+        <ArticleContainer
           article={
             Object {
               "id": "a",
             }
           }
         />,
-        <Article
+        <ArticleContainer
           article={
             Object {
               "id": "b",
@@ -83,14 +83,14 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Article
+          <ArticleContainer
             article={
               Object {
                 "id": "a",
               }
             }
           />,
-          <Article
+          <ArticleContainer
             article={
               Object {
                 "id": "b",

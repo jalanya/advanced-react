@@ -74,3 +74,19 @@ function extraProps(store, originalProps) {
 
 export default storeProvider(extraProps)(Article);
 ```
+
+## Subscribing to State
+
+### Using the setState Function
+
+#### `setState(stateChange[, callback])`
+
+The second parameter to setState() is an optional callback function that will be executed once setState is completed and the component is re-rendered. Generally we recommend using `componentDidUpdate()` for such logic instead.
+
+You may optionally pass an object as the first argument to setState() instead of a function.
+
+#### lodash.pickBy
+[_.pickBy(object, [predicate=_.identity])](https://lodash.com/docs/4.17.10#pickBy)
+
+#### lodash.debouce
+[_.debounce(func, [wait=0], [options={}])](https://lodash.com/docs/4.17.10#debounce)

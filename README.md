@@ -85,8 +85,26 @@ The second parameter to setState() is an optional callback function that will be
 
 You may optionally pass an object as the first argument to setState() instead of a function.
 
-#### lodash.pickBy
-[_.pickBy(object, [predicate=_.identity])](https://lodash.com/docs/4.17.10#pickBy)
+#### [lodash.pickBy](https://lodash.com/docs/4.17.10#pickBy)
 
-#### lodash.debouce
-[_.debounce(func, [wait=0], [options={}])](https://lodash.com/docs/4.17.10#debounce)
+#### [lodash.debouce](https://lodash.com/docs/4.17.10#debounce)
+
+### Subscribing to State from Child Components
+
+#### [`React.PureComponent`](https://reactjs.org/docs/react-api.html#reactpurecomponent)
+
+`React.PureComponent` is similar to `React.Component`. The difference between them is that `React.Component` doesn’t implement `shouldComponentUpdate()`, but `React.PureComponent` implements it with a shallow prop and state comparison.
+
+If your React component’s `render()` function renders the same result given the same props and state, you can use `React.PureComponent` for a performance boost in some cases.
+
+#### [`forceUpdate()`](https://reactjs.org/docs/react-component.html#forceupdate)
+
+```
+component.forceUpdate(callback)
+```
+
+By default, when your component’s state or props change, your component will re-render. If your `render()` method depends on some other data, you can tell React that the component needs re-rendering by calling `forceUpdate()`.
+
+Calling `forceUpdate()` will cause `render()` to be called on the component, skipping `shouldComponentUpdate()`. This will trigger the normal lifecycle methods for child components, including the `shouldComponentUpdate()` method of each child. React will still only update the DOM if the markup changes.
+
+Normally you should try to avoid all uses of `forceUpdate()` and only read from this.props and this.state in `render()`.

@@ -108,3 +108,28 @@ By default, when your component’s state or props change, your component will r
 Calling `forceUpdate()` will cause `render()` to be called on the component, skipping `shouldComponentUpdate()`. This will trigger the normal lifecycle methods for child components, including the `shouldComponentUpdate()` method of each child. React will still only update the DOM if the markup changes.
 
 Normally you should try to avoid all uses of `forceUpdate()` and only read from this.props and this.state in `render()`.
+
+## Performance Optimization
+### Understanding shouldComponentUpdate and componentWillUpdate
+
+#### [`componentDidMount()`](https://reactjs.org/docs/react-component.html#componentdidmount)
+`componentDidMount()` is invoked immediately after a component is mounted (inserted into the tree). Initialization that requires DOM nodes should go here. If you need to load data from a remote endpoint, this is a good place to instantiate the network request.
+
+This method is a good place to set up any subscriptions. If you do that, don’t forget to unsubscribe in `componentWillUnmount()`.
+
+#### [`UNSAFE_componentWillUpdate()`](https://reactjs.org/docs/react-component.html#unsafe_componentwillupdate)
+
+`UNSAFE_componentWillUpdate()` is invoked just before rendering when new props or state are being received. Use this as an opportunity to perform preparation before an update occurs. This method is not called for the initial render.
+
+A way where you could look into how many times the rendering is happing, you can use the code below:
+```
+shouldComponentUpdate(nextProps, nextState) {
+  return true;
+}
+
+componentWillUpdate(nextProps, nextState) {
+  console.log('Updating Component...');
+}
+```
+
+#### [`Date.prototype.toLocaleTimeString()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString)

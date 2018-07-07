@@ -133,3 +133,13 @@ componentWillUpdate(nextProps, nextState) {
 ```
 
 #### [`Date.prototype.toLocaleTimeString()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString)
+
+### Making Store-connected Components Subscribe to Partial State
+
+#### [Performance Tools](https://reactjs.org/docs/perf.html)
+
+#### [Debugging React performance with React 16 and Chrome Devtools](https://building.calibreapp.com/debugging-react-performance-with-react-16-and-chrome-devtools-c90698a522ad)
+
+#### [Profiling Components with the Chrome Performance Tab](https://reactjs.org/docs/optimizing-performance.html#profiling-components-with-the-chrome-performance-tab)
+
+#### [Puts your console on blast when React is making unnecessary updates](https://github.com/maicki/why-did-you-update)

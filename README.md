@@ -143,3 +143,39 @@ componentWillUpdate(nextProps, nextState) {
 #### [Profiling Components with the Chrome Performance Tab](https://reactjs.org/docs/optimizing-performance.html#profiling-components-with-the-chrome-performance-tab)
 
 #### [Puts your console on blast when React is making unnecessary updates](https://github.com/maicki/why-did-you-update)
+
+### Immutable Data Structures
+
+Code below is mutating the state.
+```
+setTimeout(() => {
+  const fakeArticle = {
+    ...rawData.articles[0],
+    id: 'fakeArticleId',
+  }
+  this.data.articles[fakeArticle.id] = fakeArticle;
+   this.notifySubscribers();
+}, 1000);
+```
+
+Code below is not mutating the state.
+```
+setTimeout(() => {
+  const fakeArticle = {
+    ...rawData.articles[0],
+    id: 'fakeArticleId',
+  }
+  this.data = {
+    ...this.data,
+    articles: {
+      ...this.data.articles,
+      [fakeArticle.id]: fakeArticle
+    },
+  };
+  this.notifySubscribers();
+}, 1000);
+```
+Always, we must use immutable data structures, never mutate your data structures directly, because that's going to have performance implications on your application, eventually. However, when you start copying object to avoid mutability, things might start to be harder than they should so it should be great to use some kind of immutability helper.
+
+##### [Immutability Helpers](https://reactjs.org/docs/update.html)
+##### [immutable-js](https://facebook.github.io/immutable-js/)

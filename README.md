@@ -179,3 +179,16 @@ Always, we must use immutable data structures, never mutate your data structures
 
 ##### [Immutability Helpers](https://reactjs.org/docs/update.html)
 ##### [immutable-js](https://facebook.github.io/immutable-js/)
+
+## Production Deployment Best Practices
+
+### Continuous Integration and Test Coverage
+
+##### [Customizing Git - Git Hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
+
+Git hooks are scripts that Git executes before or after events such as: commit, push, and receive.
+
+[Git hooks](https://githooks.com/)
+
+##### [Test and Deploy with Confidence](https://travis-ci.org/)
+Easily sync your GitHub projects with Travis CI and you’ll be testing your code in minutes!

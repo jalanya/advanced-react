@@ -192,3 +192,8 @@ Git hooks are scripts that Git executes before or after events such as: commit, 
 
 ##### [Test and Deploy with Confidence](https://travis-ci.org/)
 Easily sync your GitHub projects with Travis CI and you’ll be testing your code in minutes!
+
+### Upgrading Dependencies
+
+[Semantic Versioning 2.0.0](https://semver.org/)
+Given a version number MAJOR.MINOR.PATCH

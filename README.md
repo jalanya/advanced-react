@@ -197,3 +197,22 @@ Easily sync your GitHub projects with Travis CI and you’ll be testing your cod
 
 [Semantic Versioning 2.0.0](https://semver.org/)
 Given a version number MAJOR.MINOR.PATCH
+
+
+### Separating Vendor Files
+
+##### CommonsChunkPlugin
+```
+new webpack.optimize.CommonsChunkPlugin(options);
+```
+The CommonsChunkPlugin is an opt-in feature that creates a separate file (known as a chunk), consisting of common modules shared between multiple entry points.
+
+The CommonsChunkPlugin has been removed in webpack v4 legato. To learn how chunks are treated in the latest version, check out the [SplitChunksPlugin](https://webpack.js.org/plugins/split-chunks-plugin/).
+
+
+#### New optimization.splitChunks option was introduced
+You can find more information in the links below:
+
+##### [webpack 4.0.0-alpha.5 feedback](https://github.com/webpack/webpack/issues/6357)
+
+##### [RIP CommonsChunkPlugin](https://gist.github.com/sokra/1522d586b8e5c0f5072d7565c2bee693)

@@ -216,3 +216,18 @@ You can find more information in the links below:
 ##### [webpack 4.0.0-alpha.5 feedback](https://github.com/webpack/webpack/issues/6357)
 
 ##### [RIP CommonsChunkPlugin](https://gist.github.com/sokra/1522d586b8e5c0f5072d7565c2bee693)
+
+
+### Running Node.js in Production
+
+#### [PM2](http://pm2.keymetrics.io/)
+Advanced, production process manager for Node.js - A Complete feature set for production environment, built with a worldwide community of developers and enterprises
+
+- Behavior configuration | Source map support
+- Container Integration | Watch & Reload
+- Log management | Monitoring
+- Module System | Max memory reload
+- Cluster Mode | Hot reload
+- Development workflow | Startup Scripts
+- Deployment workflow | PaaS Compatible
+- Keymetrics monitoring | API

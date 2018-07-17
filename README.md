@@ -231,3 +231,24 @@ Advanced, production process manager for Node.js - A Complete feature set for pr
 - Development workflow | Startup Scripts
 - Deployment workflow | PaaS Compatible
 - Keymetrics monitoring | API
+
+
+### Summary and Course Wrap Up
+
+##### [jscomplete/reactful](https://github.com/jscomplete/reactful)
+
+An opinionated CLI for full-stack server-rendered React applications
+
+#### REPLs
+
+##### [jsComplete/Repl](https://jscomplete.com/repl)
+This is a playground for JavaScript and React to test simple code or prototype ideas.
+
+
+##### [Codesandbox](https://codesandbox.io/)
+The online code editor
+
+#### Recommendations
+
+##### [Advanced Node.js](https://app.pluralsight.com/library/courses/nodejs-advanced/table-of-contents)
+##### [Building Scalable APIs with GraphQL](https://app.pluralsight.com/library/courses/graphql-scalable-apis/table-of-contents)

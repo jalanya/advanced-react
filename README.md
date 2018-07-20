@@ -1,4 +1,21 @@
 # Advanced react
+## Dependencies
+
+### Production Dependencies
+
+Dependency | Use
+-- | ---
+[babel-cli](https://babeljs.io/docs/en/babel-cli.html)| Babel Command line interface. This can be used to compile files from the command line
+[babel-loader](https://github.com/babel/babel-loader)|Adds Babel support to Webpack. This package allows transpiling JavaScript files using Babel and webpack.
+[babel-polyfill](https://babeljs.io/docs/en/babel-polyfill)| Polyfill for Babel features that cannot be transpiled. Like async/await
+[babel-preset-env](https://babeljs.io/docs/en/babel-preset-env)| It is a preset that compiles down to a minimum of ES5 (preset-es2015), but can also take a browser or runtime version and determine which plugins are needed for that specific environment.
+[babel-preset-react](https://babeljs.io/docs/en/babel-preset-react.html)|Add JSX support to Babel
+[babel-preset-stage-2](https://babeljs.io/docs/en/babel-preset-stage-2)| Any transforms in [stage-x presets](https://babeljs.io/docs/en/plugins/) are changes to the language that haven't been approved to be part of a release of Javascript (such as ES6/ES2015)
+
+##### [babel-preset-es2015 -> babel-preset-env](http://babeljs.io/docs/en/env/)
+##### [babel/babel-preset-env](https://github.com/babel/babel-preset-env)
+##### [Babel & preset-env](https://codeburst.io/babel-preset-env-cbc0bbf06b8f)
+##### [What are Babel "plugins" and "presets"?](https://www.fullstackreact.com/articles/what-are-babel-plugins-and-presets/)
 
 ## The Context API and Higher Order Components
 
@@ -11,7 +28,7 @@
 **Note:**
 The legacy context API will be removed in a future major version. Use the new context API introduced with version 16.3. The legacy API will continue working for all 16.x releases.
 
-[Context](https://reactjs.org/docs/context.html) | [Legacy Context](https://reactjs.org/docs/context.html)
+[Context](https://reactjs.org/docs/context.html) | [Legacy Context](https://reactjs.org/docs/legacy-context.html)
 
 
 ### Mapping Extra Props
@@ -79,7 +96,7 @@ export default storeProvider(extraProps)(Article);
 
 ### Using the setState Function
 
-#### `setState(stateChange[, callback])`
+#### [`setState(stateChange[, callback])`](https://reactjs.org/docs/react-component.html#setstate)
 
 The second parameter to setState() is an optional callback function that will be executed once setState is completed and the component is re-rendered. Generally we recommend using `componentDidUpdate()` for such logic instead.
 
@@ -121,7 +138,7 @@ This method is a good place to set up any subscriptions. If you do that, don’t
 
 `UNSAFE_componentWillUpdate()` is invoked just before rendering when new props or state are being received. Use this as an opportunity to perform preparation before an update occurs. This method is not called for the initial render.
 
-A way where you could look into how many times the rendering is happing, you can use the code below:
+A way where you could look into how many times the rendering is happening, you can use the code below:
 ```
 shouldComponentUpdate(nextProps, nextState) {
   return true;

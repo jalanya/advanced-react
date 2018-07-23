@@ -2,7 +2,7 @@
   "name": "advanced-react",
   "version": "1.0.0",
   "description": "Advanced React",
-  "main": "lib/server.js --interpreter babel-node",
+  "main": "lib/server.js",
   "author": "Jose Alanya",
   "license": "MIT",
   "scripts": {
